@@ -37,6 +37,7 @@ coverage.xml
 *.log
 *.db
 *.sqlite3
+alembic
 
 # Arquivos de Banco de Dados e Backups (PostgreSQL, etc.)
 *.sql
