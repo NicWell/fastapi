@@ -13,9 +13,9 @@ Base = declarative_base()
 class Usuario(Base):
     __tablename__ = "usuarios"
     id = Column("id",Integer,primary_key=True,autoincrement=True)   
-    nome = Column("nome",String,nullable=False)
-    email = Column("email",String,nullable=False)
-    senha = Column("senha",String,nullable=False)
+    nome = Column("nome",String)
+    email = Column("email",String)
+    senha = Column("senha",String)
     ativo = Column("ativo",Boolean)
     admin = Column("admin",Boolean,default=False)
     
@@ -32,15 +32,15 @@ class Pedido(Base):
     __tablename__="pedidos"
     #lista de status de pedidos
     
-    STATUS_PEDIDOS = (
+    #STATUS_PEDIDOS = (
         #(CHAVE, VALOR)
-        ("PENDENTE","PENDENTE"),
-        ("CANCELADO","CANCELADO"),
-        ("FINALIZADO","FINALIZADO")
-    )
+     #   ("PENDENTE","PENDENTE"),
+      #  ("CANCELADO","CANCELADO"),
+       # ("FINALIZADO","FINALIZADO")
+    #)
     
     id = Column("id",Integer,primary_key=True,autoincrement=True) 
-    status = Column("status",ChoiceType(choices=STATUS_PEDIDOS)) #pendente, cancelado, finalizado
+    status = Column("status",String)
     usuario = Column("usuario",ForeignKey("usuarios.id"))
     preco = Column("preco",Float)
     
