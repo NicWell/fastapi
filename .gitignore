@@ -1,0 +1,55 @@
+# Arquivos de Ambiente Virtual (Virtual Environment)
+# Nunca comite a pasta do ambiente virtual!
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Arquivos de cache e bytecode do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Pastas de distribuição e build
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Arquivos de configuração de IDEs e editores de código
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos de teste e cobertura de código
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+
+# Arquivos de log e bancos de dados locais
+*.log
+*.db
+*.sqlite3
+
+# Arquivos de Banco de Dados e Backups (PostgreSQL, etc.)
+*.sql
+*.dump
+*.backup
+
+# Arquivos de segredos e variáveis de ambiente
+# NUNCA comite senhas, tokens ou chaves de API!
+*.env
+.env.*
+!.env.example
+local_settings.py
+
+# Arquivos gerados pelo sistema operacional
+.DS_Store
+Thumbs.db
